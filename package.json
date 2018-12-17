@@ -1,0 +1,15 @@
+{
+  "name": "chromix-three",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "build": "tsc"
+  },
+  "author": "Angelo Gazzola <angelo@nglgzz.com> (https://github.com/nglgzz)",
+  "license": "MIT",
+  "dependencies": {
+    "chromix-too": "0.0.15",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  }
+}
