@@ -1,6 +1,6 @@
 import { chrome } from './chrome';
 
-type Tab = {
+export type Tab = {
   active: boolean;
   audible: boolean;
   autoDiscardable: boolean;
@@ -21,11 +21,11 @@ type Tab = {
   windowId: number;
 };
 
-type TabFilter = {
+export type TabFilter = {
   pinned?: boolean;
 };
 
-type TabMatch = {
+export type TabMatch = {
   url?: RegExp;
   title?: RegExp;
 };

@@ -1,12 +1,21 @@
 {
   "name": "chromix-three",
   "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "ts-node index.ts",
-    "build": "tsc"
+    "build": "rm -r dist && tsc",
+    "prepublishOnly": "npm run build"
   },
   "author": "Angelo Gazzola <angelo@nglgzz.com> (https://github.com/nglgzz)",
   "license": "MIT",
+  "repository": "nglgzz/chromix-three",
+  "keywords": [
+    "chromix",
+    "chrome",
+    "api"
+  ],
   "dependencies": {
     "chromix-too": "0.0.15",
     "ts-node": "^7.0.1",
