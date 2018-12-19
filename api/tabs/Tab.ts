@@ -54,7 +54,7 @@ export default class Tab {
       code = `
       {
         const script = document.createElement('script');
-        const code = document.createTextNode('(function() {${code}})();');
+        const code = document.createTextNode(\`(function() {${code}})();\`);
         script.appendChild(code);
         document.body.appendChild(script);
         document.body.removeChild(script);
