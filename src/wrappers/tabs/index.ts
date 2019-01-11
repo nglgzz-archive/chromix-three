@@ -1,4 +1,4 @@
-import { chrome } from '../chrome';
+import { chrome } from '../../chrome';
 import Tab from './Tab';
 
 export type TabFilter = {
@@ -14,7 +14,7 @@ export async function filter(
   filter?: TabFilter,
   match?: TabMatch,
 ): Promise<Tab[]> {
-  const tabs = await chrome('tabs.query', filter || {});
+  const [tabs] = await chrome('tabs.query', filter || {});
 
   if (!tabs || !Array.isArray(tabs)) {
     // no results found

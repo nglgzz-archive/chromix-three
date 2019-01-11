@@ -1,4 +1,4 @@
-import { chrome } from './chrome';
+import { chrome } from '../chrome';
 
 export function set(key: string, value: any): Promise<undefined> {
   return chrome('storage.local.set', { [key]: JSON.stringify(value) });

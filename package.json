@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "start": "ts-node index.ts",
+    "start": "ts-node src/index.ts",
     "build": "rm -r dist && tsc",
     "prepublishOnly": "npm run build"
   },
@@ -17,8 +17,9 @@
     "api"
   ],
   "dependencies": {
-    "chromix-too": "0.0.15",
+    "@types/ws": "^6.0.1",
     "ts-node": "^7.0.1",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.2",
+    "ws": "^6.1.2"
   }
 }

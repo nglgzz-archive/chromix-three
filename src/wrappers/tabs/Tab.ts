@@ -1,4 +1,4 @@
-import { chrome } from '../chrome';
+import { chrome } from '../../chrome';
 
 export type TabInfo = {
   active: boolean;
@@ -47,7 +47,8 @@ export default class Tab {
   executeScript = async (
     script: string,
     withContext?: boolean,
-  ): Promise<Tab> => {
+    returnOutput?: boolean,
+  ): Promise<Tab | any> => {
     let code = script;
     if (withContext) {
       // execute the script in the context of the tab
@@ -62,11 +63,11 @@ export default class Tab {
     `;
     }
 
-    await chrome('tabs.executeScript', this.info.id, {
+    const output = await chrome('tabs.executeScript', this.info.id, {
       code,
       runAt: 'document_end',
     });
-    return this;
+    return returnOutput ? output : this;
   };
 
   setURL = async (url: string): Promise<Tab> => {
