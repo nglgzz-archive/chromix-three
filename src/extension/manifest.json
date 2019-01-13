@@ -1,0 +1,21 @@
+{
+  "name": "Chromix-Three",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "JS access to chrome's extension API.",
+
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "history",
+    "clipboardRead",
+    "storage",
+    "sessions",
+    "notifications",
+    "webNavigation",
+    "<all_urls>"
+  ],
+
+  "background": { "scripts": ["background.js"] },
+  "options_page": "options.html"
+}
